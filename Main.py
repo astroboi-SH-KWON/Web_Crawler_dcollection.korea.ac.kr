@@ -7,14 +7,15 @@ import Process
 #  webdriver path
 WEB_DRV_PATH = "C:/Users/terry/chromedriver.exe"
 
+# URL list
 TARGET_URL = "http://dcollection.korea.ac.kr/"
 SUB_TARGET_URL = "/browse/broDeptItemList/"
+# Target dept number
 DEPT_ID = "000000003554"
 # DEPT_ID = "000000003219"
 TARGET_PAGE_URL = "/browse/broDeptItemList/"+ DEPT_ID +"?navigationSize=10&query=%28dept_id%3A" + DEPT_ID + "%29+AND+%28item_type_code%3ADissertation%29&locale=ko&pageSize=10&insCode=211009&sortDir=desc&searchTotalCount=0&mode=item&rows=10&searthTotalPage=0&treePageNum=1&sortField=pub_year&start=0&ajax=false&deptId=" + DEPT_ID
 
 RESULT_PATH = "F:/Downloads/thesis"
-
 ############### end setting env ################
 WEB_DRV = webdriver.Chrome(WEB_DRV_PATH)
 
@@ -38,12 +39,7 @@ def main():
     util = Utils.Utils()
     util.make_excel([RESULT_PATH, data_list])
 
-
-
-
-
-
-# print("Find by key_word = [ "+ KEY_WORD +" ], OPT_NUM = [ "+ str(OPT_NUM) +" ] >>>>>>>>>>>>>>>>>>>>>>>>>>>>")
+print("Spidering >>>>>>>>>>>>>>>>>>>>>>>>>>>>")
 main()
 
 
